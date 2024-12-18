@@ -24,4 +24,3 @@ No se incluyen los archivos de los **Server Artifacts**. Necesitarás descargar 
 ---
 
 💻 **Autor:** *Cristian Querol*  
-🔗 **Repositorio:** [GitHub](https://github.com/tuusuario/Estructura-Basica-ServerFiveM)
