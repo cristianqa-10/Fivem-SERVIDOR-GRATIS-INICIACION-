@@ -15,7 +15,7 @@
 Antes de comenzar, asegúrate de tener lo siguiente:  
 
 1. 🛑 **XAMPP** - Para manejar la base de datos.  
-2. 🛑 **HeidiSQL** - Para gestionar la base de datos de tu servidor.  
+2. 🛑 **HeidiSQL** - Para gestionar la base de datos de tu servidor. *(Por ahora no es necesario crear una base de datos, solo instálalo)*  
 3. 🛑 **Visual Studio Code (VSCode)** - Para editar y personalizar los scripts.  
 4. 🛑 **FiveM Artifacts** - Archivos base necesarios para ejecutar el servidor.  
    - Descárgalos desde la [página oficial de FiveM](https://runtime.fivem.net/artifacts/fivem/).  
@@ -29,11 +29,10 @@ Antes de comenzar, asegúrate de tener lo siguiente:
 ### Paso 1️⃣ **Instalar los Server-Artifacts:**
 - Descarga los **FiveM Artifacts** desde la [página oficial de FiveM](https://runtime.fivem.net/artifacts/fivem/).
 - Una vez descargado el archivo comprimido, descomprímelo.
-- Coloca la carpeta **descomprimida** en la carpeta **`server`** dentro de tu proyecto (por ejemplo, `C:/Usuarios/TuUsuario/FiveM-SERVIDOR`).
+- **La carpeta `server` ya estará dentro de los archivos descomprimidos**, solo tendrás que moverla a tu carpeta de proyecto principal **FiveM** (por ejemplo, `C:/Usuarios/TuUsuario/FiveM-SERVIDOR`).
 
 ### Paso 2️⃣ **Abrir el FXServer:**
-- Abre la carpeta `server` de los artifacts.
-- Dentro de esa carpeta, haz doble clic en el archivo **`FXServer.exe`** para iniciar la configuración inicial del servidor.
+- Dentro de la carpeta `server` que moviste, encontrarás el archivo **`FXServer.exe`**. Haz doble clic para iniciar la configuración inicial del servidor.
 
 ### Paso 3️⃣ **Configuración inicial:**
 Al abrir **FXServer.exe**, se te pedirá que ingreses algunos detalles, como:
@@ -53,7 +52,7 @@ Al abrir **FXServer.exe**, se te pedirá que ingreses algunos detalles, como:
 
 ### 4️⃣ **Configura la base de datos:**  
 - Instala y ejecuta **XAMPP**.  
-- Crea una base de datos con **HeidiSQL** e importa el archivo `.sql` proporcionado.  
+- **HeidiSQL:** Aunque no es necesario crear una base de datos para iniciar el servidor, instala **HeidiSQL** para gestionar la base de datos si es necesario en el futuro.  
 
 ### 5️⃣ **Editar las configuraciones:**  
 - Abre el archivo `server.cfg` y ajusta las configuraciones principales (nombre del servidor, clave, etc.).  
@@ -66,40 +65,13 @@ Para evitar errores en la consola de **FXServer.exe** al ejecutar el servidor en
 
 - Una vez que **XAMPP** esté funcionando, puedes proceder a ejecutar el servidor con el archivo **`start.bat`** o directamente a través de **FXServer.exe**.
 
-### 7️⃣ **Únete a tu servidor:**  
-Abre FiveM y conéctate a `localhost` para comenzar a explorar.  
+### 7️⃣ **Creación de la carpeta txData:**
+- Después de completar la instalación y configuración, se creará una carpeta llamada **`txData`** en tu carpeta de servidor.  
+- Dentro de esta carpeta, encontrarás varios archivos y configuraciones esenciales para tu servidor. ¡Tu servidor ya está creado y listo para ser utilizado!
 
----
-
-## 📖 **Documentación y ayuda**  
-En este repositorio encontrarás:  
-- 📂 **server.cfg:** Archivo de configuración principal.  
-- 📚 **Guía paso a paso:** Documentación para instalar y configurar scripts adicionales.  
-- 🔧 **Scripts básicos:** Funciones como policía, mecánico, interacción con vehículos, y más.  
-
----
-
-## 🔧 **Personalización recomendada**  
-- **Trabajos personalizados:** Agrega tus propios trabajos o modifica los existentes.  
-- **Scripts avanzados:** Integra recursos adicionales para mejorar la experiencia de los jugadores.  
-- **Sistema de oposiciones:** Limita trabajos importantes (como policía) para acceder únicamente mediante oposiciones desde Discord.  
-
----
-
-## 🤝 **Contribuciones**  
-¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto:  
-1. Haz un **fork** del repositorio.  
-2. Crea una nueva rama para tus cambios.  
-3. Envía un **pull request** con tus mejoras.  
-
----
-
-## 📧 **Contacto y soporte**  
-Si necesitas ayuda o tienes alguna sugerencia, no dudes en contactarme.  
-
----
-
-💻 **Autor:** *TuNombre*  
-🔗 **Repositorio:** [GitHub](https://github.com/tuusuario/Fivem-SERVIDOR-GRATIS-INICIACION)
-
----
+### 8️⃣ **Agregar tus propios scripts:**
+- El **FXServer.exe** crea automáticamente varios scripts básicos para el funcionamiento inicial del servidor.
+- Puedes **agregar tus propios scripts** en la carpeta `resources` de tu servidor.  
+- Recuerda que para que tus scripts funcionen correctamente, debes agregar la siguiente línea en el archivo `server.cfg`:
+  ```plaintext
+  ensure nombre_del_script
